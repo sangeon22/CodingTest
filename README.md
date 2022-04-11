@@ -3,7 +3,7 @@
 - 백준알고리즘 문제를 풀면, 자동 커밋
 - This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
 
-<hr>
+<br>
 
 ## 백준 1 ~ 9단계(기본적인문법)
 1.	입출력과 사칙연산	입력, 출력과 사칙연산을 연습해 봅시다. Hello World!	완료 (13문제)
@@ -17,7 +17,7 @@
 9.	재귀	재귀함수를 다뤄 봅시다. (4문제)
 
 
-<hr>
+<br>
 
 ## 백준 알고리즘 단계
 - BFS, DFS
