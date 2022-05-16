@@ -1,16 +1,2 @@
-# a = [sum(list(map(int, input().split()))) for i in range(5)]
-# print(a.index(max(a)) + 1, max(a))
-
-a = []
-max = 0
-max_idx = 0
-
-for i in range(5):
-    a.append(sum(map(int, input().split())))
-
-for idx, sum in enumerate(a):
-    if sum > max:
-        max_idx = idx+1
-        max = sum
-
-print('{} {}'.format(max_idx, max))
+a = [sum(list(map(int, input().split()))) for i in range(5)]
+print(a.index(max(a)) + 1, max(a))
