@@ -22,7 +22,8 @@ https://www.acmicpc.net/step
 ## Python 배우기 (1~50)
 [Python 배우기 (1~50)](https://www.acmicpc.net/workbook/view/459) -진행중-
 <br>
-
+<br>
+<br>
 ## 백준 알고리즘 단계
 - BFS, DFS
 - 자료구조
