@@ -21,7 +21,7 @@
 <br>
 
 ## Python 배우기 (1~50)
-[Python 배우기 (1~50)](https://www.acmicpc.net/workbook/view/459) -진행중-
+[Python 배우기 (1~50)](https://www.acmicpc.net/workbook/view/459) -완료-
 <br>
 <br>
 <br>
