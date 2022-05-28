@@ -25,6 +25,11 @@
 <br>
 <br>
 <br>
+## 삼성 SW 역량 테스트 기출 문제
+[삼성 SW 역량 테스트 기출 문제](https://www.acmicpc.net/workbook/view/1152) -진행중-
+<br>
+<br>
+<br>
 ## 백준 알고리즘 단계
 - BFS, DFS
 - 자료구조
