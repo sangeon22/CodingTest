@@ -25,13 +25,17 @@
 <br>
 <br>
 <br>
-## 삼성 SW 역량 테스트 기출 문제
-[삼성 SW 역량 테스트 기출 문제](https://www.acmicpc.net/workbook/view/1152)
-<br>
-<br>
-<br>
 ## 백준 알고리즘 단계
-- BFS, DFS
+[알고리즘 분류](https://www.acmicpc.net/problem/tags)
 - 자료구조
 - 부르트포스 알고리즘
 - 정렬
+- 너비 우선 탐색
+- 깊이 우선 탐색
+- 그리디 알고리즘
+- 이분 탐색
+<br>
+<br>
+<br>
+## 삼성 SW 역량 테스트 기출 문제
+[삼성 SW 역량 테스트 기출 문제](https://www.acmicpc.net/workbook/view/1152)
