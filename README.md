@@ -29,8 +29,9 @@
 <br>
 ## 백준 알고리즘 단계
 [알고리즘 기초 1/2](https://code.plus/course/41)
+<br>
 [알고리즘 기초 2/2](https://code.plus/course/42)
-
+<br>
 
 
 [알고리즘 분류](https://www.acmicpc.net/problem/tags)
