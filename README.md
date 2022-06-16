@@ -28,6 +28,11 @@
 <br>
 <br>
 ## 백준 알고리즘 단계
+[알고리즘 기초 1/2](https://code.plus/course/41)
+[알고리즘 기초 2/2](https://code.plus/course/42)
+
+
+
 [알고리즘 분류](https://www.acmicpc.net/problem/tags)
 - 자료구조 <진행중>
 - 부르트포스 알고리즘
