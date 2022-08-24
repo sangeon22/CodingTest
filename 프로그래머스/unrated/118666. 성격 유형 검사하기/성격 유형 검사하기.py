@@ -9,7 +9,7 @@ def solution(survey, choices):
         if choices[i] > 4:
             dic[right] += choices[i] - 4
         elif choices[i] < 4:
-            dic[left] += 4 - choices[i]
+            dic[left] += choices[i]
     
     if dic["R"] >= dic["T"]:
         answer += "R"
