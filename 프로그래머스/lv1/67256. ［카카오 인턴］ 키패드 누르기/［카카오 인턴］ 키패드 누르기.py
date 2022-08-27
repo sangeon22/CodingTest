@@ -1,4 +1,6 @@
 def solution(numbers, hand):
+    # LRLLLRLLRRL
+    # LRLRLLLLLRR
     answer = ''
     key = {
         1:[0,0], 2:[0,1], 3:[0,2],
@@ -20,10 +22,10 @@ def solution(numbers, hand):
             target = key[i]
             left_d = abs(target[0] - left[0]) + abs(target[1] - left[1])
             right_d = abs(target[0] - right[0]) + abs(target[1] - right[1])
-            if left_d > right_d:
+            if left_d < right_d:
                 answer += 'L'
                 left = key[i]
-            elif left_d < right_d:
+            elif left_d > right_d:
                 answer += 'R'
                 right = key[i]
             else:
