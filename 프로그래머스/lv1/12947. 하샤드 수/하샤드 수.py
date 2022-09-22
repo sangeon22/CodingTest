@@ -7,5 +7,5 @@ def solution(x):
         
     if x % total == 0:
         return True
-    else:
-        return False
+    
+    return False
