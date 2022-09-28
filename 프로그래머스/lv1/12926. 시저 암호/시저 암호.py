@@ -4,16 +4,10 @@ def solution(s, n):
         if i == " ":
             answer += " "
         else:
-            if 65 <= ord(i) <= 90:
-                if 65 <= ord(i)+n <= 90:
-                    answer += chr(ord(i)+n)
-                else:
-                    answer += chr(ord(i) -26 +n)
+            if (65 <= ord(i) <= 90 and 65 <= ord(i)+n <= 90) or (97 <= ord(i) <= 122 and 97 <= ord(i)+n <= 122):
+                answer += chr(ord(i)+n)
             else:
-                if 97 <= ord(i)+n <= 122:
-                    answer += chr(ord(i)+n)
-                else:
-                    answer += chr(ord(i) -26 +n)
+                answer += chr(ord(i) -26 +n)
     return answer
 
 print(solution("AB", 1))
