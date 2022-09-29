@@ -5,7 +5,10 @@
 <br>
 
 
-## 프로그래머스 Lv.1 <진행중>
+## 프로그래머스 Lv.1 (49/56문제)<나머지 문제 추후 진행>
+[프로그래머스 Lv.1](https://school.programmers.co.kr/learn/challenges?page=1&levels=1&languages=python3&order=acceptance_desc)
+
+## 프로그래머스 Lv.2 (75문제)<진행중>
 [프로그래머스 Lv.1](https://school.programmers.co.kr/learn/challenges?page=1&levels=1&languages=python3&order=acceptance_desc)
 
 <br>
