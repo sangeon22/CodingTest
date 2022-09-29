@@ -5,15 +5,17 @@
 <br>
 
 
-## 프로그래머스 Lv.1 (49/56문제)<나머지 문제 추후 진행>
-[프로그래머스 Lv.1](https://school.programmers.co.kr/learn/challenges?page=1&levels=1&languages=python3&order=acceptance_desc)
-
-## 프로그래머스 Lv.2 (75문제)<진행중>
+### 프로그래머스 Lv.1 (49/56문제)<나머지 문제 추후 진행>
 [프로그래머스 Lv.1](https://school.programmers.co.kr/learn/challenges?page=1&levels=1&languages=python3&order=acceptance_desc)
 
 <br>
 
-## 백준 1 ~ 11단계(기본적인문법)
+### 프로그래머스 Lv.2 (75문제)<진행중>
+[프로그래머스 Lv.2](https://school.programmers.co.kr/learn/challenges?page=1&levels=2&languages=python3&order=acceptance_desc)
+
+<br>
+
+### 백준 1 ~ 11단계(기본적인문법)
 [백준 1 ~ 11단계(기본적인문법)](https://www.acmicpc.net/step)
 
 - 입출력과 사칙연산 - 입력, 출력과 사칙연산을 연습해 봅시다. Hello World! (13문제) <완료>
@@ -30,12 +32,12 @@
 
 <br>
 
-## Python 배우기 (1~50) <완료>
+### Python 배우기 (1~50) <완료>
 [Python 배우기 (1~50)](https://www.acmicpc.net/workbook/view/459) (50문제) <완료>
 <br>
 <br>
 <br>
-## 백준 알고리즘 단계 <진행중>
+### 백준 알고리즘 단계 <진행중>
 [알고리즘 기초 1/2](https://code.plus/course/41)
 
 - 200 - 자료구조 1 (8문제) <완료>
@@ -63,8 +65,8 @@
 - 깊이 우선 탐색
 - 그리디 알고리즘
 - 이분 탐색
+
 <br>
-<br>
-<br>
-## 삼성 SW 역량 테스트 기출 문제
+
+### 삼성 SW 역량 테스트 기출 문제
 [삼성 SW 역량 테스트 기출 문제](https://www.acmicpc.net/workbook/view/1152)
