@@ -1,5 +1,2 @@
 def solution(before, after):
-    if sorted(before) != sorted(after):
-        return 0
-    else:
-        return 1
+    return 0 if sorted(before) != sorted(after) else 1
