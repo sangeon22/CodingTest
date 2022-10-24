@@ -1,5 +1,4 @@
 def solution(letter):
-    answer = ''
     dic = {
         '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
         '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
@@ -7,7 +6,4 @@ def solution(letter):
         '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
         '-.--':'y','--..':'z'
     }
-    for i in letter.split(" "):
-        temp = i
-        answer += dic[temp]
-    return answer
+    return ''.join([dic[i]for i in letter.split(" ")])
