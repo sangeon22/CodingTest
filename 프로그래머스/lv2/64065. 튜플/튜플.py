@@ -1,15 +1,11 @@
 def solution(s):
-    answer = []
     li = []
-    
     s = s[2:-2].split("},{")
 
     for i in s:
         li.append(list(map(int, i.split(','))))
 
-    
     li.sort(key=len)
-    
     dic = {i:0 for i in li[-1]}
     
     for i in li[-1]:
@@ -20,7 +16,5 @@ def solution(s):
     
     sorted_dic = sorted(dic.items(), key=lambda x:x[1], reverse =True)
     
-    for i in range(len(sorted_dic)):
-        answer.append(sorted_dic[i][0])
-        
-    return answer
+    
+    return [sorted_dic[i][0] for i in range(len(sorted_dic))]
