@@ -5,12 +5,13 @@ def solution(s):
     s = s[2:-2].split("},{")
 
     for i in s:
-        temp = i.split(',')
-        li.append(list(map(int, temp)))
+        li.append(list(map(int, i.split(','))))
 
+    
     li.sort(key=len)
     
     dic = {i:0 for i in li[-1]}
+    
     for i in li[-1]:
         temp = 0
         for j in li:
@@ -18,6 +19,7 @@ def solution(s):
         dic[i] = temp
     
     sorted_dic = sorted(dic.items(), key=lambda x:x[1], reverse =True)
+    
     for i in range(len(sorted_dic)):
         answer.append(sorted_dic[i][0])
         
