@@ -1,10 +1,8 @@
 def solution(s):
     answer = []
     li = []
-
-    s = s.replace('{', '')
-    s = s.split("},")
-    s[-1] = s[-1].replace('}', '')
+    
+    s = s[2:-2].split("},{")
 
     for i in s:
         temp = i.split(',')
