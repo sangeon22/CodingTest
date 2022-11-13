@@ -3,7 +3,7 @@ from collections import deque
 
 def solution(A, B):
     answer = 0
-    a = deque(list(A))
+    a = deque(A)
 
     while (True):
         if ''.join(i for i in a) == B:
