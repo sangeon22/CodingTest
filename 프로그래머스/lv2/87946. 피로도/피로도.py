@@ -4,7 +4,7 @@ from itertools import permutations
 def solution(k, dungeons):
     answer = 0
     temp = 0
-    
+
     com = list(permutations(dungeons))
     for i in com:
         if temp > answer:
@@ -15,6 +15,7 @@ def solution(k, dungeons):
             if hp >= j[0]:
                 hp -= j[1]
                 temp += 1
-
+        if answer == len(dungeons):
+            return answer
 
     return answer
