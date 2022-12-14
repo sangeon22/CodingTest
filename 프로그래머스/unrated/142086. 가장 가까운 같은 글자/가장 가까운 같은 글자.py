@@ -17,14 +17,14 @@ def solution(s):
     # 
     #     pre.append(s[i])
 
-    pre = {}
+    dic = {}
 
     for idx, i in enumerate(s):
-        if i not in pre:
+        if i not in dic:
             answer.append(-1)
         else:
-            answer.append(abs(pre[i] - idx))
+            answer.append(abs(dic[i] - idx))
 
-        pre[i] = idx
+        dic[i] = idx
 
     return answer
