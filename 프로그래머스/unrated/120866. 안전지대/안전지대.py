@@ -1,5 +1,4 @@
 def solution(board):
-    answer = 0
     target = []
 
     # 1 좌표 추출
@@ -12,16 +11,13 @@ def solution(board):
     for i in target:
         fill_around(board, i)
 
-    # 0인 좌표 수 추출
-    for i in board:
-        for j in i:
-            if j == 0:
-                answer += 1
-    return answer
+    # 0인 좌표 개수 추출
+    return sum(i.count(0) for i in board)
+
 
 def fill_around(board, target):
-    i, j = target  # target을 좌표 [i, j]로 언팩
+    i, j = target
     for x in range(i - 1, i + 2):
         for y in range(j - 1, j + 2):
-            if 0 <= x < len(board) and 0 <= y < len(board[0]):
+            if 0 <= x < len(board) and 0 <= y < len(board):
                 board[x][y] = 1
