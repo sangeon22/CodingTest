@@ -1,19 +1,10 @@
 def solution(board):
     answer = 0
-    n = len(board)
     target = []
 
-    # 0인 좌표 수 추출
-    for i in board:
-        for j in i:
-            if j == 0:
-                answer += 1
-    if answer == 0:
-        return 0
-
     # 1 좌표 추출
-    for i in range(n):
-        for j in range(n):
+    for i in range(len(board)):
+        for j in range(len(board)):
             if board[i][j] == 1:
                 target.append([i, j])
 
@@ -22,7 +13,6 @@ def solution(board):
         fill_around(board, i)
 
     # 0인 좌표 수 추출
-    answer = 0  # 기존 answer 값을 초기화해야 함
     for i in board:
         for j in i:
             if j == 0:
