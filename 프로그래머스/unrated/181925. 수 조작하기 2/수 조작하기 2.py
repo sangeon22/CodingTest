@@ -1,0 +1,2 @@
+def solution(numLog):
+    return str([str(numLog[i+1] - numLog[i]) for i in range(len(numLog)-1)]).replace("'1'","w").replace("'-1'","s").replace("'10'","d").replace("'-10'","a").replace(",","").replace(" ","").replace("]","").replace("[","")
