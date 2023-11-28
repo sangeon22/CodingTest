@@ -1,6 +1,5 @@
 def solution(arr):
-    row = len(arr)
-    col = len(arr[0])
+    row, col= len(arr), len(arr[0])
     if row > col:
         for i in range(row):
             for _ in range(row - col):
