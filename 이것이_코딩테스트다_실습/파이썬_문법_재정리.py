@@ -51,3 +51,57 @@ arr3.reverse() # O(N)
 arr3.insert(1, "삽입할 값2") # O(N)
 arr3.count("특정값") # O(N)
 # arr3.remove("특정값") # O(N)
+
+
+# 문자열 자료형
+# 인덱싱, 슬라이싱 가능
+a = "ABCDEF"
+print(a[2:4])
+
+# 특정 인덱스 값 변경 불가능(Immutable)
+# a[0] = 'a'
+# print(a)
+# TypeError: 'str' object does not support item assignment
+
+
+# 튜플 자료형
+# () 소괄호 이용
+# 리스트보다 공간 효율적(더 적은 메모리 사용)
+a = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+print(a)
+print(a[1:4])
+
+# 한 번 선언된 값 변경 불가능(Immutable)
+# a[1] = 1
+# print(a)
+# TypeError: 'tuple' object does not support item assignment
+
+# 리스트보다 튜플 사용하는 경우
+# 1. 서로 다른 성질의 데이터를 묶어서 관리할 때
+#    최단 경로 알고리즘 -> (비용, 노드번호)의 형태로 자주 사용
+# 2. 데이터의 나열을 해싱의 키 값으로 사용해야 할 때
+#    튜플은 리스트와 달리 Immutable하기에 키 값으로 사용 가능
+# 3. 리스트보다 메모리 효율적으로 사용해야할 때
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
