@@ -84,24 +84,88 @@ print(a[1:4])
 # 3. 리스트보다 메모리 효율적으로 사용해야할 때
 
 
+# 사전 자료형 dic
+# 키-값(Key-Value) 쌍을 가지는 데이터
+# 리스트, 튜플이 값을 순차적으로 저장하는 것과 대비됨 -> 인덱싱 불가
+# Immutable 한 값을 키로 사용
+# 사전 자료형은 내부적으로 해시테이블(HashTable) 이용 -> 조회, 수정의 시간 복잡도 -> O(1)
+
+dic = dict()
+dic['사과'] = 'Apple'
+dic['바나나'] = 'Banana'
+dic['코코넛'] = 'Coconut'
+print(dic)
+
+dic2 = {
+    '홍길동': 97,
+    '이순신': 98
+}
+print(dic2)
+
+# 해당 키 존재하는지 확인
+print('사과' in dic)
+print('수박' in dic)
+
+# 키 데이터만 뽑으려면
+# dic 객체로 반환되니 list로 변환
+print(list(dic.keys()))
+for i in dic.keys():
+    print(i)
+
+# 값 데이터만 뽑으로면
+print(list(dic.values()))
+for i in dic.values():
+    print(i)
+
+# 각 키에 따른 값 데이터 출력
+for key in dic.keys():
+    print(dic[key])
 
 
+# 집합 자료형 set
+# 중복 허용X
+# 순서 X
+# 존재 유무 체크에 이용 용이
+# 집합은 리스트 or 문자열로 초기화
+# => set() 사용
+# -> ({})안에 쉼표(,)를 기준으로 구분하여 삽입하여 초기화
+# 사전 자료형 dic처럼 조회, 수정의 시간 복잡도 -> O(1)
+a = set([1, 1, 2, 2, 3, 4, 5, 5])
+print(a)
 
+b = {1, 1, 2, 2, 3, 4, 5, 5}
+print(b)
 
+# 합집합, 차집합, 교집합 사용 가능
+a = {1, 2, 3, 4, 5}
+b = set([3, 4, 5, 6, 7])
 
+# 합집합
+print(a | b)
+# union도 결과는 같은데 뭐지 차집합, 교집합은 자동 완성에 안뜬다..
+print(a.union(b))
 
+# 차집합
+print(a - b)
+# 알아보니 차집합도 존재
+print(a.difference(b))
 
+# 교집합
+print(a & b)
+# 교집합도 존재
+print(a.intersection(b))
+# 2개 이상의 set에서는 .intersection_update 사용하는 듯함
 
+# 원소 추가
+c = {1, 2, 3}
+c.add(4)
+print(c)
 
+# 원소 여러 개 추가 (아래 둘 다 되는 듯함)
+c.update([5, 6])
+c.update({7, 8})
+print(c)
 
-
-
-
-
-
-
-
-
-
-
-
+# 특정 원소 삭제
+c.remove(3)
+print(c)
