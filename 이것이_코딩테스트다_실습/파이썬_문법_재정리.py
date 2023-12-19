@@ -1,3 +1,5 @@
+# 헷갈리는 부분, 모르는 부분만 기록
+
 ## 자료형
 # 정수형, 실수형, 복소수형, 문자열, 리스트, 튜플, 사전
 
@@ -53,7 +55,7 @@ arr3.count("특정값") # O(N)
 # arr3.remove("특정값") # O(N)
 
 
-# 문자열 자료형
+## 문자열 자료형
 # 인덱싱, 슬라이싱 가능
 a = "ABCDEF"
 print(a[2:4])
@@ -64,7 +66,7 @@ print(a[2:4])
 # TypeError: 'str' object does not support item assignment
 
 
-# 튜플 자료형
+## 튜플 자료형
 # () 소괄호 이용
 # 리스트보다 공간 효율적(더 적은 메모리 사용)
 a = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
@@ -84,7 +86,7 @@ print(a[1:4])
 # 3. 리스트보다 메모리 효율적으로 사용해야할 때
 
 
-# 사전 자료형 dic
+## 사전 자료형 dic
 # 키-값(Key-Value) 쌍을 가지는 데이터
 # 리스트, 튜플이 값을 순차적으로 저장하는 것과 대비됨 -> 인덱싱 불가
 # Immutable 한 값을 키로 사용
@@ -122,7 +124,7 @@ for key in dic.keys():
     print(dic[key])
 
 
-# 집합 자료형 set
+## 집합 자료형 set
 # 중복 허용X
 # 순서 X
 # 존재 유무 체크에 이용 용이
@@ -169,3 +171,78 @@ print(c)
 # 특정 원소 삭제
 c.remove(3)
 print(c)
+
+
+## 기본 입출력
+# map() => 리스트의 모든 원소에 특정한 함수 적용
+# a = list(map(int, input().split()))
+# b, c, d = map(int, input().split())
+# print(b, c, d)
+
+# 더 빠른 입출력
+# 입력 후 개행(Enter)가 입력 => rstrip()
+from sys import stdin
+# a = stdin.readline().rstrip()
+# print(a)
+
+# f-string
+print(f"테스트 {c}입니다.")
+
+# format도 있었는데 뭔 차이지
+# 직관적인건 f-string 인듯
+# 찾아보니 %d, %s 방식 -> .format 방식(python3) -> f-string 방식(python 3.6) 순으로 등장
+# + f-string은 산술연산 지원 {a+b}
+# + 성능상으로도 유리 => 상수 및 함수를 사용하는 게 아니라서 런타임 단계에서 사용되니 성능상 유리하다고 한다.
+# + 변수명이 길면 단점이 되기도 함
+print("테스트 {}, {} 입니다".format(c, a))
+print("테스트 {1}, {0} 입니다".format(c, a))
+
+
+## 조건문, 반복문
+# x in 리스트, 튜플, 문자열, 딕셔너리 모두 사용 가능
+
+
+## 함수, 람다식
+# 내장 함수 => input, print, split 등
+# 사용자 정의 함수
+def func(param):
+    return param + 1
+
+print(func(1))
+
+# 전역 변수
+# 함수 바깥의 변수를 사용하고자 한다면 global 사용
+a = 10
+def func():
+    # a += 1
+    # UnboundLocalError: local variable 'a' referenced before assignment
+    # 그러나 참조만 한다면 에러 X
+    # 전역변수 리스트는 global X
+    global a
+    a += 1
+    print(a)
+
+func()
+
+# 함수 패킹 여러 개 반환 값
+def operator(a, b):
+    plus = a + b
+    minus = a - b
+    multiplication = a * b
+    division = a / b
+    return plus, minus, multiplication, division
+
+a, b, c, d = operator(10, 3)
+print(a, b, c, d)
+
+# 람다(익명함수)
+print((lambda a, b: a + b)(1,2))
+
+# 키 값 정렬
+arr = [('c', 99), ('a', 97), ('b', 98), ('A', 65)]
+print(sorted(arr, key=lambda x:x[1]))
+
+# 2개 리스트 각 인덱스 합
+li1 = [1, 2, 3, 4, 5]
+li2 = [6, 7, 8, 9, 10]
+print(list(map(lambda x, y: x + y, li1, li2)))
