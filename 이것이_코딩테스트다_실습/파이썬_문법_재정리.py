@@ -246,3 +246,60 @@ print(sorted(arr, key=lambda x:x[1]))
 li1 = [1, 2, 3, 4, 5]
 li2 = [6, 7, 8, 9, 10]
 print(list(map(lambda x, y: x + y, li1, li2)))
+
+
+## 내장 함수
+# sum(), min(), max(), eval(), sorted(),
+
+# itertools 라이브러리
+# 반복 데이터 처리
+# 순열과 조합에 사용
+# 순열: 서로 다른 n개에서 r개를 뽑아 나열 => {'A', 'B', 'C'} => 'ABC', 'ACB', 'BAC', BCA', 'CAB', 'CBA'
+# nPr (Permutation) = n * (n-1) * (n-2) * ... * (n-r+1)
+# 순열의 수가 천만 ~ 1억인데 완전탐색하면 시간초과 가능성이 높다
+from itertools import permutations
+li = ['A', 'B', 'C']
+print(list(permutations(li, 3)))
+
+# 조합: 서로 다른 n개에서 r개를 뽑는데 순서 상관X => {'A', 'B', 'C'} => 'AB', 'AC', 'CA'
+# nCr (Combination) = nPr / r!
+from itertools import combinations
+print(list(combinations(li, 2)))
+
+# 중복 순열
+from itertools import product
+print(list(product(li, repeat=3)))
+
+# 중복 조합
+from itertools import combinations_with_replacement
+print(list(combinations_with_replacement(li, 2)))
+
+# collections
+# 덱(deque), 카운터(Counter) 등 자료 구조
+from collections import Counter
+li2 = ['A', 'A', 'C', 'B', 'B', 'B']
+print(Counter(li2))
+print(dict(Counter(li2)))
+print(Counter(li2).most_common(1)) # 최빈값 n개 반환으로 알고 있음
+# 내 기억으로는 내장함수 count와 차이는 count는 숫자나 set자료형에서 안되는 걸로 알고 있고 dict 리턴 차이도 있다
+
+# math
+# 수학적 기능, 팩토리얼, 제곱근, 최대공약수(GCD), 삼각함수, 파이(pi)
+import math
+print(f"gcd = {math.gcd(21, 14)}")
+print(f"lcm = {21 * 14 //math.gcd(21, 14)}")
+# print(math.lcm(21, 14)) 이건 파이썬 버전이 높아야 되는 걸로 알고 있다 난 안되네 3.7인데 확인해보니 3.9부터 지원됨
+print(math.factorial(5)) # 팩토리얼
+print(math.sqrt(16)) # 제곱근인거 같고
+print(math.pi) # 파이일거고
+print(math.pow(2, 3)) #2 ** 3 이였던거 같음
+# print(math.) 이외에도 자동완성 추천 엄청 많다 ㄷㄷ.ㄷ.
+
+
+# heapq
+# 힙(Heap) 자료구조
+# 우선순위 큐 기능 구현에 사용 => 다익스트라 최단 경로 알고리즘
+
+# bisect
+# 이진탐색(Binary Search)에 사용
+
