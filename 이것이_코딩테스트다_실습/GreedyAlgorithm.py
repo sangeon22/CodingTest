@@ -41,7 +41,7 @@ print(count)
 
 # 가능하면 최대한 많이 나눈다 => 최적의 해 보장? => 1빼는 것보다 K로 나누는게 가장 빠르게 N을 줄일 수 있고, 2가지 방법을 통해 항상 1이 된다.
 
-# (1차) 해설 안보고 혼자 풀기 => 이렇게 되면 나눠질 때까지 반복
+# (1차 - 해설 안보고 혼자 풀기) 이렇게 되면 나눠질 때까지 반복
 N, K = map(int, input().split())
 answer = 0
 while True:
@@ -55,7 +55,7 @@ while True:
         break
 print(answer)
 
-# (2차) log 시간 복잡도로 해결 가능
+# (2차 - 책 풀이) log 시간 복잡도로 해결 가능
 N, K = map(int, input().split())
 answer = 0
 while True:
@@ -86,7 +86,7 @@ print(answer)
 # [출력]
 # 첫째 줄에 만들어질 수 있는 가장 큰 수를 출력합니다.
 
-# (1차) 해설 안보고 혼자 풀기
+# (1차 - 해설 안보고 혼자 풀기)
 s = input()
 exp = '(' + s[0]
 
@@ -99,7 +99,7 @@ for i in range(1, len(s)):
 exp = ((len(s) - 2) * "(") + exp
 print(eval(exp))
 
-# (2차) => 나는 앞에 것만 확인 했는데 결과를 모아놓는 값(answer)도 0 or 1 인지도 함께 체크해야 함
+# (2차 - 책 풀이) 나는 앞에 것만 확인 했는데 결과를 모아놓는 값(answer)도 0 or 1 인지도 함께 체크해야 함
 s = input()
 answer = int(s[0])
 
@@ -132,7 +132,7 @@ print(answer)
 # [출력]
 # 여행을 떠날 수 있는 그룹 수의 최댓값을 출력합니다.
 
-# (1차) 해설 안보고 혼자 풀기
+# (1차 - 해설 안보고 혼자 풀기)
 n = int(input())
 m = sorted(list(map(int, input().split())))
 
