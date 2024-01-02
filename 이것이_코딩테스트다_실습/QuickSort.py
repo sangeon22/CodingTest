@@ -12,29 +12,42 @@
 arr = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
 
 
-def quick(arr, start, end):
-    if start >= end:
-        return
-    pivot = start
-    left = start + 1
-    right = end
+# def quick(arr, start, end):
+#     if start >= end:
+#         return
+#     pivot = start
+#     left = start + 1
+#     right = end
+#
+#     # 왼쪽부터 pivot보다 큰 값 인덱스랑 오른쪽부터 pivot 작은 값 교환할 때, 엇갈리면 종료
+#     while left <= right:
+#         while left <= end and arr[left] <= arr[pivot]:
+#             left += 1
+#         while right > start and arr[right] >= arr[pivot]:
+#             right -= 1
+#
+#         if (left > right):
+#             arr[right], arr[pivot] = arr[pivot], arr[right]
+#         else:
+#             arr[left], arr[right] = arr[right], arr[left]
+#
+#     # 분할 이후, 왼쪽, 오른쪽을 재귀적으로 또 정렬
+#     quick(arr, start, right - 1)
+#     quick(arr, right + 1, end)
+#
+#
+# quick(arr, 0, len(arr) - 1)
+# print(arr)
 
-    # 왼쪽부터 pivot보다 큰 값 인덱스랑 오른쪽부터 pivot 작은 값 교환할 때, 엇갈리면 종료
-    while left <= right:
-        while left <= end and arr[left] <= arr[pivot]:
-            left += 1
-        while right > start and arr[right] >= arr[pivot]:
-            right -= 1
+def quick(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[0]
+    temp = arr[1:]
 
-        if (left > right):
-            arr[right], arr[pivot] = arr[pivot], arr[right]
-        else:
-            arr[left], arr[right] = arr[right], arr[left]
+    left = [i for i in temp if i <= pivot]
+    right = [i for i in temp if i > pivot]
 
-    # 분할 이후, 왼쪽, 오른쪽을 재귀적으로 또 정렬
-    quick(arr, start, right - 1)
-    quick(arr, right + 1, end)
+    return quick(left) + [pivot] + quick(right)
 
-
-quick(arr, 0, len(arr) - 1)
-print(arr)
+print(quick(arr))
