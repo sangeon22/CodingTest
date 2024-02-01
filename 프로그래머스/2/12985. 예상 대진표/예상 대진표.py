@@ -1,6 +1,6 @@
 import math
 
-
+# 깃
 def solution(n, a, b):
     def binary(x, y, num):
         if (x > num // 2 and y > num // 2) or (x <= num // 2 and y <= num // 2):
