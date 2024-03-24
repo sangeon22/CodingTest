@@ -1,10 +1,6 @@
 def calc_date(today, date, month):
-    date = date.split(".")
-
     # 개인정보 별 날짜 추출
-    date_year = int(date[0])
-    date_month = int(date[1])
-    date_day = int(date[2])
+    date_year, date_month, date_day = map(int, date.split("."))
 
     # 약관 날짜에 해당하는 개월 수를 개인 정보 별 날짜에 더함
     date_month += month
@@ -25,15 +21,9 @@ def calc_date(today, date, month):
     else:
         date_day -= 1
 
-    # 개인정보별 유효기간
-    print(f"{date_year}.{date_month}.{date_day}")
-
-    item = today.split(".")
-    today_year = int(item[0])
-    today_month = int(item[1])
-    today_day = int(item[2])
 
     # today를 지난 개인정보 유효기간이면 True(폐기 대상)
+    today_year, today_month, today_day = map(int, today.split("."))
     if today_year > date_year:
         return True
     elif today_year == date_year:
